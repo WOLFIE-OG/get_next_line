@@ -6,7 +6,26 @@
 /*   By: otodd <otodd@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 13:20:01 by otodd             #+#    #+#             */
-/*   Updated: 2023/11/20 13:20:02 by otodd            ###   ########.fr       */
+/*   Updated: 2023/11/21 15:01:23 by otodd            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 1000
+# endif
+# include <unistd.h>
+# include <stdlib.h>
+# include <stdio.h>
+# include <fcntl.h>
+
+char	*get_next_line(int fd);
+char	*ft_strjoin(char *store, char *buffer);
+size_t	ft_strlen(const char *s, int type);
+char	*ft_strchr(char const *s, int c);
+char	*read_from_buffer(int fd, char *store);
+char	*read_line(char *store);
+char	*read_after_newline(char *store);
+
+#endif
