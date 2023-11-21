@@ -1,0 +1,1 @@
+cc *.c -Wall -Wextra -Werror -g -D BUFFER_SIZE=1

@@ -6,18 +6,17 @@
 /*   By: otodd <otodd@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 13:20:01 by otodd             #+#    #+#             */
-/*   Updated: 2023/11/21 15:01:23 by otodd            ###   ########.fr       */
+/*   Updated: 2023/11/21 17:52:45 by otodd            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 1000
+#  define BUFFER_SIZE 1024
 # endif
 # include <unistd.h>
 # include <stdlib.h>
-# include <stdio.h>
 # include <fcntl.h>
 
 char	*get_next_line(int fd);
