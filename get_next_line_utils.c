@@ -6,7 +6,7 @@
 /*   By: otodd <otodd@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 15:26:21 by otodd             #+#    #+#             */
-/*   Updated: 2023/11/28 13:41:13 by otodd            ###   ########.fr       */
+/*   Updated: 2023/11/28 13:41:29 by otodd            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char	*ft_strjoin(char *store, char *buffer)
 {
 	size_t	i;
 	size_t	j;
-	char	*new_str;z
+	char	*new_str;
 
 	if (!store)
 	{
