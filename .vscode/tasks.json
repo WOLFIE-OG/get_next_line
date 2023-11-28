@@ -1,0 +1,27 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++: get_next_line",
+			"command": "cc",
+			"args": [
+				"get_next_line.c",
+				"get_next_line.h",
+				"get_next_line_utils.c",
+				"-g",
+				"-Wall",
+				"-Wextra",
+				"-Werror"
+			],
+			"options": {
+				"cwd": "${workspaceRoot}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compiler: cc"
+		}
+	]
+}

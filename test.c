@@ -6,7 +6,7 @@
 /*   By: otodd <otodd@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 15:16:11 by otodd             #+#    #+#             */
-/*   Updated: 2023/11/21 17:55:05 by otodd            ###   ########.fr       */
+/*   Updated: 2023/11/23 13:34:40 by otodd            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	test_single()
 	char	*c_line = "";
 
 	i = 0;
-	fd = open("test.txt", O_RDONLY);
+	fd = open("alternate_line_nl_with_nl", O_RDONLY);
 	printf(BBLU"\n%s\n"reset, EDGES);
 	printf("|\n| %s ["BBLU"%d"reset"]\n|\n", "Opening fd with buffer size of", BUFFER_SIZE);
 	while (c_line != NULL)
