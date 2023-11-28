@@ -6,7 +6,7 @@
 /*   By: otodd <otodd@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 13:19:50 by otodd             #+#    #+#             */
-/*   Updated: 2023/11/28 17:49:15 by otodd            ###   ########.fr       */
+/*   Updated: 2023/11/28 18:37:02 by otodd            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,11 +55,13 @@ char	*read_line(char *store)
 {
 	char	*line;
 	size_t	i;
+	size_t	line_length;
 
 	i = 0;
 	if (!store[i])
 		return (NULL);
-	line = (char *)malloc(ft_strlen(store, 1) + 2);
+	line_length = ft_strlen(store, 1);
+	line = (char *)malloc(line_length + 1);
 	if (!line)
 		return (NULL);
 	while (store[i] && store[i] != '\n')
@@ -67,9 +69,6 @@ char	*read_line(char *store)
 		line[i] = store[i];
 		i++;
 	}
-	if (store[i] == '\n')
-		line[i++] = '\n';
-	// printf("\n%c\n", line[i]);
 	line[i] = '\0';
 	return (line);
 }
@@ -87,12 +86,13 @@ char	*read_after_newline(char *store)
 		free(store);
 		return (NULL);
 	}
-	line = (char *)malloc(sizeof(char) * (ft_strlen(&store[i + 1], 0) + 2));
+	line = (char *)malloc(sizeof(char) * (ft_strlen(&store[i + 1], 0) + 1));
 	if (!line)
 		return (NULL);
 	i++;
 	while (store[i])
 		line[j++] = store[i++];
 	line[j] = '\0';
+	free(store);
 	return (line);
 }

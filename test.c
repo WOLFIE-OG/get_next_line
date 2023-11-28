@@ -6,7 +6,7 @@
 /*   By: otodd <otodd@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 15:16:11 by otodd             #+#    #+#             */
-/*   Updated: 2023/11/28 17:44:33 by otodd            ###   ########.fr       */
+/*   Updated: 2023/11/28 18:06:31 by otodd            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,15 @@
 char	EDGES[] = "========================================================================================================================================";
 
 
-void	test_single()
+void	test_single(int	arg_n, char **arg_a)
 {
 	int		fd;
 	int		i;
 	char	*c_line;
 
+	(void)arg_n;
 	i = 0;
-	fd = open("big_line_with_nl", O_RDONLY);
+	fd = open(arg_a[1], O_RDONLY);
 	if (fd == -1)
 	{
 		perror("Error opening file");
@@ -46,8 +47,8 @@ void	test_single()
 }
 
 
-int	main(void)
+int	main(int arg_n, char **arg_a)
 {
-	test_single();
+	test_single(arg_n, arg_a);
 	return (0);
 }
