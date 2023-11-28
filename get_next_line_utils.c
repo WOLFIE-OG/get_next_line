@@ -6,7 +6,7 @@
 /*   By: otodd <otodd@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 15:26:21 by otodd             #+#    #+#             */
-/*   Updated: 2023/11/28 13:39:36 by otodd            ###   ########.fr       */
+/*   Updated: 2023/11/28 13:41:13 by otodd            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,7 @@ char	*ft_strjoin(char *store, char *buffer)
 {
 	size_t	i;
 	size_t	j;
-	char	*new_str;
-	size_t	total_length;
+	char	*new_str;z
 
 	if (!store)
 	{
@@ -42,25 +41,18 @@ char	*ft_strjoin(char *store, char *buffer)
 	}
 	if (!store || !buffer)
 		return (NULL);
-	total_length = ft_strlen(store, 0) + ft_strlen(buffer, 0) + 1;
-	new_str = (char *)malloc(total_length);
+	new_str = (char *)malloc(ft_strlen(store, 0) + ft_strlen(buffer, 0) + 1);
 	if (!new_str)
-		return (free_and_return(store));
+		return (NULL);
 	i = -1;
 	j = 0;
 	while (store[++i] != '\0')
 		new_str[i] = store[i];
 	while (buffer[j] != '\0')
 		new_str[i++] = buffer[j++];
-	new_str[total_length - 1] = '\0';
+	new_str[ft_strlen(store, 0) + ft_strlen(buffer, 0)] = '\0';
 	free(store);
 	return (new_str);
-}
-
-char	*free_and_return(char *ptr)
-{
-	free(ptr);
-	return (NULL);
 }
 
 char	*ft_strchr(char const *s, int c)
