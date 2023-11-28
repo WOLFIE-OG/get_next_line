@@ -6,7 +6,7 @@
 /*   By: otodd <otodd@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 15:26:21 by otodd             #+#    #+#             */
-/*   Updated: 2023/11/28 12:57:15 by otodd            ###   ########.fr       */
+/*   Updated: 2023/11/28 13:02:41 by otodd            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,10 @@ char	*ft_strjoin(char *store, char *buffer)
 	total_length = ft_strlen(store, 0) + ft_strlen(buffer, 0) + 1;
 	new_str = (char *)malloc(total_length);
 	if (!new_str)
+	{
+		free(store);
 		return (NULL);
+	}
 	i = -1;
 	j = 0;
 	while (store[++i] != '\0')
