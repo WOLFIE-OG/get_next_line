@@ -6,7 +6,7 @@
 /*   By: otodd <otodd@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 15:26:21 by otodd             #+#    #+#             */
-/*   Updated: 2023/11/28 13:41:29 by otodd            ###   ########.fr       */
+/*   Updated: 2023/11/28 14:10:57 by otodd            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,13 +41,15 @@ char	*ft_strjoin(char *store, char *buffer)
 	}
 	if (!store || !buffer)
 		return (NULL);
+	if (!store || !buffer)
+		return (NULL);
 	new_str = (char *)malloc(ft_strlen(store, 0) + ft_strlen(buffer, 0) + 1);
 	if (!new_str)
 		return (NULL);
 	i = -1;
-	j = 0;
 	while (store[++i] != '\0')
 		new_str[i] = store[i];
+	j = 0;
 	while (buffer[j] != '\0')
 		new_str[i++] = buffer[j++];
 	new_str[ft_strlen(store, 0) + ft_strlen(buffer, 0)] = '\0';
