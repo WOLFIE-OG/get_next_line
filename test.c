@@ -6,7 +6,7 @@
 /*   By: otodd <otodd@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 15:16:11 by otodd             #+#    #+#             */
-/*   Updated: 2023/11/23 13:34:40 by otodd            ###   ########.fr       */
+/*   Updated: 2023/11/28 13:24:39 by otodd            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,13 @@ void	test_single()
 	char	*c_line = "";
 
 	i = 0;
-	fd = open("alternate_line_nl_with_nl", O_RDONLY);
+	fd = open("nl", O_RDONLY);
 	printf(BBLU"\n%s\n"reset, EDGES);
 	printf("|\n| %s ["BBLU"%d"reset"]\n|\n", "Opening fd with buffer size of", BUFFER_SIZE);
 	while (c_line != NULL)
 	{
 		c_line = get_next_line(fd);
-		if (c_line)
-			printf("| ["BBLU"%d"reset"] - ["BGRN"%zu"reset"] - %s", i++, sizeof(c_line), c_line);
+		printf("| ["BBLU"%d"reset"] - ["BGRN"%zu"reset"] - %s", i++, sizeof(c_line), c_line);
 	}
 	printf("\n|"BBLU"\n%s\n"reset, EDGES);
 }
