@@ -6,7 +6,7 @@
 /*   By: otodd <otodd@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 13:19:50 by otodd             #+#    #+#             */
-/*   Updated: 2023/11/28 18:37:02 by otodd            ###   ########.fr       */
+/*   Updated: 2023/11/29 14:15:35 by otodd            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,14 +54,12 @@ char	*read_from_buffer(int fd, char *store)
 char	*read_line(char *store)
 {
 	char	*line;
-	size_t	i;
-	size_t	line_length;
+	int		i;
 
 	i = 0;
 	if (!store[i])
 		return (NULL);
-	line_length = ft_strlen(store, 1);
-	line = (char *)malloc(line_length + 1);
+	line = (char *)malloc(ft_strlen(store, 1) + 2);
 	if (!line)
 		return (NULL);
 	while (store[i] && store[i] != '\n')
@@ -69,6 +67,8 @@ char	*read_line(char *store)
 		line[i] = store[i];
 		i++;
 	}
+	if (store[i] == '\n')
+		line[i++] = '\n';
 	line[i] = '\0';
 	return (line);
 }
@@ -79,7 +79,7 @@ char	*read_after_newline(char *store)
 	int		i;
 	int		j;
 
-	i = ft_strlen(store, 0);
+	i = ft_strlen(store, 1);
 	j = 0;
 	if (!store[i])
 	{
