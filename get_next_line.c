@@ -6,7 +6,7 @@
 /*   By: otodd <otodd@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 13:19:50 by otodd             #+#    #+#             */
-/*   Updated: 2023/11/29 14:15:35 by otodd            ###   ########.fr       */
+/*   Updated: 2023/11/29 14:43:54 by otodd            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char	*read_from_buffer(int fd, char *store)
 	char	*buffer;
 	int		bytes_read;
 
-	buffer = malloc((BUFFER_SIZE + 1) * sizeof(char));
+	buffer = (char *)malloc((BUFFER_SIZE + 1) * sizeof(char));
 	if (!buffer)
 		return (NULL);
 	bytes_read = 1;
@@ -42,6 +42,7 @@ char	*read_from_buffer(int fd, char *store)
 		if (bytes_read == -1)
 		{
 			free(buffer);
+			free(store);
 			return (NULL);
 		}
 		buffer[bytes_read] = '\0';
