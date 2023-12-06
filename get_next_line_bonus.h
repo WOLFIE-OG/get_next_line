@@ -6,7 +6,7 @@
 /*   By: otodd <otodd@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 13:20:01 by otodd             #+#    #+#             */
-/*   Updated: 2023/12/06 13:37:24 by otodd            ###   ########.fr       */
+/*   Updated: 2023/12/06 14:17:31 by otodd            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,8 @@
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 1024
 # endif
-# include <unistd.h>
 # include <stdlib.h>
-# include <fcntl.h>
+# include <unistd.h>
 
 char	*get_next_line(int fd);
 char	*ft_strjoin(char *store, char *buffer);
