@@ -11,4 +11,4 @@
 # **************************************************************************** #
 
 ./build.sh
-valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes -s ./a.out read_error.txt
+valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes -s ./a.out multiple_line_with_nl
