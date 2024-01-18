@@ -19,7 +19,7 @@ OBJS = $(SRCS:%.c=bin/%.o)
 all: dir $(OBJS)
 
 dir:
-	@mkdir -p bin
+	mkdir -p bin
 
 bin/%.o: src/%.c
 	$(CC) -o $@ -c $< $(CFLAGS) 
