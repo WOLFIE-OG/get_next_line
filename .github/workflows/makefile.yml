@@ -21,4 +21,4 @@ jobs:
       run: make re
 
     - name: View Contents of bin
-      run: ls -la bin/
+      run: ls -la obj/
