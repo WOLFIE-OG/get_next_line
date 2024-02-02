@@ -6,7 +6,7 @@
 #    By: otodd <otodd@student.42london.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/29 16:33:58 by otodd             #+#    #+#              #
-#    Updated: 2024/02/02 18:06:37 by otodd            ###   ########.fr        #
+#    Updated: 2024/02/02 18:07:21 by otodd            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,15 +24,15 @@ OBJS := $(SRCS:%.c=obj/%.o)
 all: dir $(OBJS)
 
 dir:
-	@echo "$(GREEN)[GNL] Creating obj directory...$(NC)"
+	@echo "$(GREEN)[FTGNL] Creating obj directory...$(NC)"
 	mkdir -p obj
 
 obj/%.o: src/%.c
-	@echo "$(GREEN)[GNL] Compiling $< --> $@$(NC)"
+	@echo "$(GREEN)[FTGNL] Compiling $< --> $@$(NC)"
 	@$(CC) -o $@ -c $< $(CFLAGS)
 
 clean:
-	@echo "$(RED)[GNL] Cleaning object files...$(NC)"
+	@echo "$(RED)[FTGNL] Cleaning object files...$(NC)"
 	rm -rf $(OBJS)
 	rm -rf obj
 
