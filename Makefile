@@ -6,7 +6,7 @@
 #    By: otodd <otodd@student.42london.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/29 16:33:58 by otodd             #+#    #+#              #
-#    Updated: 2024/02/05 03:04:06 by otodd            ###   ########.fr        #
+#    Updated: 2024/02/05 17:08:19 by otodd            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,4 +38,4 @@ clean:
 	@rm -rf $(OBJS)
 	@rm -rf obj
 
-re: all
+re: clean all
