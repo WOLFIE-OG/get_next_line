@@ -14,11 +14,21 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - name: Make program
-      run: make
+    - name: Make program as module
+      run: make module
+
+    - name: View Contents of bin
+      run: ls -la obj/
+
+    - name: Clean output
+      run: make clean
+
+    - name: Make program as standalone
+      run: make all
 
     - name: Re-make program
       run: make re
 
-    - name: View Contents of bin
-      run: ls -la obj/
+    - name: View Contents of standalone
+      run: nm build/libgnl.a
+
