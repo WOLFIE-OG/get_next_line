@@ -6,7 +6,7 @@
 #    By: otodd <otodd@student.42london.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/29 16:33:58 by otodd             #+#    #+#              #
-#    Updated: 2024/02/13 17:50:07 by otodd            ###   ########.fr        #
+#    Updated: 2024/02/13 18:42:17 by otodd            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,3 +56,5 @@ all: dir $(OBJS)
 	@mv $(NAME) $(BUILD_DIR)/
 
 re: fclean all
+
+.PHONY: all clean fclean re
