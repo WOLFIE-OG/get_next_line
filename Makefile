@@ -6,21 +6,24 @@
 #    By: otodd <otodd@student.42london.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/29 16:33:58 by otodd             #+#    #+#              #
-#    Updated: 2024/02/06 14:14:11 by otodd            ###   ########.fr        #
+#    Updated: 2024/02/13 17:50:07 by otodd            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC := cc
-NAME := libftgnl.a
-CFLAGS := -Wall -Wextra -Werror 
-SRCS := ft_get_next_line.c ft_get_next_line_utils.c
+YELLOW=\033[1;33m
+RED=\033[1;31m
+GREEN=\033[1;32m
+BLUE=\033[0;34m
+NC=\033[0m
 
-YELLOW := \033[1;33m
-RED := \033[1;31m
-GREEN := \033[1;32m
-NC := \033[0m
-OBJS := $(SRCS:%.c=obj/%.o)
-BUILD_DIR = build
+CC 			= cc
+NAME		= libftgnl.a
+CFLAGS 		= -Wall -Wextra -Werror 
+
+SRCS		= ft_get_next_line.c ft_get_next_line_utils.c
+
+OBJS		= $(SRCS:%.c=obj/%.o)
+BUILD_DIR	= build
 
 module: dir $(OBJS)
 
