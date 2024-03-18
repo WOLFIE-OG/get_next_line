@@ -9,6 +9,5 @@ To install and build
 ```bash
   git clone https://github.com/WOLFIE-OG/get_next_line
   cd get_next_line
-  git submodule update --init --recursive
   make
 ```
