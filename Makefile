@@ -6,7 +6,7 @@
 #    By: otodd <otodd@student.42london.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/29 16:33:58 by otodd             #+#    #+#              #
-#    Updated: 2024/03/19 12:12:00 by otodd            ###   ########.fr        #
+#    Updated: 2024/03/19 12:21:55 by otodd            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,11 +52,11 @@ obj/%.o: src/%.c include/*.h | dir
 	@$(CC) -o $@ -c $< $(CFLAGS)
 
 clean:
-	@echo "[$(YELLOW)FTGNL$(NC)]     Cleaning object files..."
+	@echo "[$(YELLOW)FTGNL$(NC)]     Cleaning object directory..."
 	@rm -rf obj
 
 fclean: clean
-	@echo "[$(RED)FTGNL$(NC)]     Cleaning build files..."
+	@echo "[$(RED)FTGNL$(NC)]     Cleaning build directory..."
 	@rm -rf $(BUILD_DIR)/
 
 
