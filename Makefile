@@ -6,7 +6,7 @@
 #    By: otodd <otodd@student.42london.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/29 16:33:58 by otodd             #+#    #+#              #
-#    Updated: 2024/04/23 13:38:28 by otodd            ###   ########.fr        #
+#    Updated: 2024/07/16 15:57:39 by otodd            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,9 +17,9 @@ BLUE		=	\033[1;34m
 CYAN		=	\033[1;36m
 NC			=	\033[0m
 
-CC 			= 	cc
+CC 			= 	gcc
 NAME		= 	libftgnl.a
-CFLAGS 		= 	-Wall -Wextra -Werror 
+CFLAGS 		= 	-Wall -Wextra -Werror -fPIC
 
 SRCS		=	ft_get_next_line.c ft_get_next_line_utils.c
 
