@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@main
 
     - name: Update apt
       run: sudo apt-get update --fix-missing
@@ -29,21 +29,21 @@ jobs:
     - name: Run norminette
       run: norminette src include
 
-    - name: Make program as module
+    - name: Make get_next_line as a module
       run: make module
 
-    - name: View Contents of bin
+    - name: View contents of obj
       run: ls -la obj/
 
     - name: Clean output
       run: make clean
 
-    - name: Make program as standalone
+    - name: Make get_next_line as standalone
       run: make all
 
-    - name: Re-make program
+    - name: Re-make get_next_line
       run: make re
 
-    - name: View Contents of standalone
+    - name: View contents of standalone
       run: nm -C build/libftgnl.a
 
